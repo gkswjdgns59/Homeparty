@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'neutral';
+    src: url('../fonts/NeutralFace.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'neutralBold';
+    src: url('../fonts/NeutralFace-Bold.otf') format('truetype');
+}
+
+.containDice{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.containCard{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+
+.field{
+    margin: auto;
+    width: 400px;
+    height: 200px;
+}
+
+.buttonDice{
+    margin: auto;
+    padding: 15px 30px;
+    border: 0px;
+    font-size: 15px;
+    font-family: 'neutralBold';
+
+    background: #FDFDFD;
+    box-shadow: 0px 4px 25px rgba(163, 163, 163, 0.1), 0px 4px 15px rgba(135, 135, 135, 0.15);
+    border-radius: 11px;
+}
+
+.cardIf{
+    margin: 0px;
+    width: 125px;
+    height: 225px;
+    border: 0px;
+    font-size: 15px;
+    font-family: 'neutralBold';
+    position: relative;
+
+    background: radial-gradient(92.63% 92.63% at 27.6% 18.75%, #EABFD8 0%, #A08DC1 100%);
+    box-shadow: 0px 4px 25px rgba(163, 163, 163, 0.1), 0px 4px 15px rgba(135, 135, 135, 0.15);
+    border-radius: 7px;
+}
+
+.cardThen{
+    margin: 0px;
+    width: 125px;
+    height: 225px;
+    border: 0px;
+    font-size: 15px;
+    font-family: 'neutralBold';
+    position: relative;
+
+    background: radial-gradient(98.88% 98.88% at 24% 17.19%, #F8D6E0 0%, #AEDBDD 100%);
+    box-shadow: 0px 4px 25px rgba(163, 163, 163, 0.1), 0px 4px 15px rgba(135, 135, 135, 0.15);
+    border-radius: 7px;
+}
+
+.rectCard{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    margin-top: 50%;
+    width: 50px;
+    height: 100px;
+    overflow: visible;
+    background: #FDFDFD;
+    border-radius: 2px;
+    transform: rotate(35.39deg);
+}
+
+.textCard{
+    margin: auto;
+    transform: rotate(-35.39deg);
+    white-space: nowrap;
+    font-size: 20px;
+    font-family: 'neutralBold';
+}
+
+.hoverCard{
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(2px);
+    border-radius: 7px;
+    width: 125px;
+    height: 225px;
+    position: absolute;
+    z-index: 5;
+    font-size: 20px;
+    font-family: 'neutralBold';
+
+    padding: 160px 0px 30px 0px;
+    text-align: center;
+}

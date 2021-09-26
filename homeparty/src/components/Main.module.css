@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'neutral';
+    src: url('../fonts/NeutralFace.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'neutralBold';
+    src: url('../fonts/NeutralFace-Bold.otf') format('truetype');
+}
+
+.contain{
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+
+.rowUp{
+    height: 40%;
+}
+
+.rowDown{
+    height: 60%;
+}
+
+.colDice{
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.colCard{
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.colTeam{
+    padding: 0px;
+}
