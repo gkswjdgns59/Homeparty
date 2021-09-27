@@ -1,0 +1,211 @@
+@font-face {
+    font-family: 'neutral';
+    src: url('../fonts/NeutralFace.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'neutralBold';
+    src: url('../fonts/NeutralFace-Bold.otf') format('truetype');
+}
+
+.header {   
+    font-family: 'neutralBold';
+    font-size: 16pt;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.rowOption {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 3%;
+    padding-right: 10%;
+    margin: 40px 0px;
+}
+
+.rowRecipt {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15%;
+    margin: 8px 0px;
+}
+
+.rowAction {
+    margin-top: 18px;
+    display: flex;
+    justify-content: right;
+    gap: 18px;
+}
+
+.textOption {
+    font-family: 'neutral';
+    font-size: 12pt;
+}
+
+.options {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.op1 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #EFBBA4;
+    cursor: pointer;
+    position: relative;
+}
+
+.op2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #86DD88;
+    cursor: pointer;
+    position: relative;
+}
+
+.op3 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #E8A3ED;
+    cursor: pointer;
+    position: relative;
+}
+
+.op4 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #80A9E7;
+    cursor: pointer;
+    position: relative;
+}
+
+.opSelected {
+    position: absolute;
+    z-index: 1050;
+    width: 27px;
+    height: 27px;
+    left: -3.5px;
+    top: -3.5px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.cost {
+    font-family: 'neutralBold';
+    font-size: 12pt;
+}
+
+.balance {
+    font-family: 'neutral';
+    font-size: 12pt;
+}
+
+.cancelAction {
+    font-family: 'neutral';
+    font-size: 12pt;
+    cursor: pointer;
+}
+
+.acceptUnabled {
+    font-family: 'neutralBold';
+    font-size: 12pt;
+    color: #EAEAEA;
+}
+
+.acceptIdle {
+    font-family: 'neutralBold';
+    font-size: 12pt;
+    cursor: pointer;
+}
+
+.own {
+    font-family: 'neutral';
+    font-size: 12pt;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.ownSelected {
+    position: absolute;
+    z-index: 1050;
+    width: 27px;
+    height: 27px;
+    left: -8.6px;
+    top: -3.5px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.seasonSelected {
+    position: absolute;
+    z-index: 1050;
+    width: 27px;
+    height: 27px;
+    left: 4px;
+    top: -3.5px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.cardIf{
+    width: 338px;
+    height: 666px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #FDFDFD;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cardImage{
+    display: block;
+    width: 180px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+.cardContent{
+    text-align: center;
+    font-family: 'neutral';
+    text-align: center;
+    font-size: 10pt;
+}
+
+.rowCard{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 20px;
+    align-items: center;
+}
+
+.cardType{
+    font-size: 20pt;
+    font-family: 'neutralBold';
+}
+
+.bold{
+    font-family: 'neutralBold';
+}
