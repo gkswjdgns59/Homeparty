@@ -2,7 +2,11 @@ import React, {useState} from 'react';
 import styles from './Team.module.css';
 import Modal from 'react-overlays/Modal';
 import styled from 'styled-components';
-import Overlay from './Overlay';
+import OverlayBuild from './OverlayBuild';
+import OverlayTakeover from './OverlayTakeover';
+import OverlayFee from './OverlayFee';
+// import OverlaySpell from './OverlaySpell';
+import CashHandler from './CashHandler';
 
 const Backdrop = styled("div")`
     position: fixed;
@@ -34,12 +38,18 @@ export default function SingleTeam(props){
     const [hover, setHover] = useState(false);
     const [build, setBuild] = useState(false);
     const [takeover, setTakeover] = useState(false);
-    const [salary, setSalary] = useState(false);
     const [fee, setFee] = useState(false);
     const [spell, setSpell] = useState(false);
 
     const renderBackdrop = (props) => <Backdrop {...props} />;
-
+    const handleClose = () => {
+        setBuild(false);
+        setTakeover(false);
+        setFee(false);
+        setSpell(false);
+        setHover(false);
+        console.log(CashHandler.getData());
+    }
     return(
         <div className={styles.box} onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)}>
             {hover && <div className={styles.hovered}>
@@ -49,7 +59,7 @@ export default function SingleTeam(props){
                     <div onClick={()=>setTakeover(true)} className={styles.circleDoubleLine}>
                         TAKE<br/>OVER
                     </div>
-                    <div onClick={()=>setSalary(true)} className={styles.circle}>
+                    <div onClick={()=>{CashHandler.setCash(props.idx-1, 70); setHover(false)}} className={styles.circle}>
                         SALARY
                     </div>
                     <div onClick={()=>setFee(true)} className={styles.circleDoubleLine}>
@@ -64,32 +74,47 @@ export default function SingleTeam(props){
                     TEAM #{props.idx}
                 </span>
                 <span className={styles.textRank}>
-                    RANK: 1
+                    RANK: {CashHandler.getRank(props.idx-1)}
                 </span>
             </div>
             <div className={styles.textStats}>
-                NET WORTH   150
+                NET WORTH   {CashHandler.getNet(props.idx-1)}
             </div>
             <div className={styles.textStats}>
-                CASH   150
+                CASH   {CashHandler.getCash(props.idx-1)}
             </div>
             <StyledModal 
                 show={build}
                 onHide={()=> {setBuild(false); setHover(false)}}
                 renderBackdrop={renderBackdrop}
             >
-                <Overlay callClose={()=>{setBuild(false); setHover(false)}}>
-                </Overlay>
+                <OverlayBuild idx={props.idx} callClose={handleClose}>
+                </OverlayBuild>
             </StyledModal>
             <StyledModal 
                 show={takeover}
-                onHide={()=>setTakeover(false)}
+                onHide={()=> {setTakeover(false); setHover(false)}}
                 renderBackdrop={renderBackdrop}
             >
-                <div>
-                    test
-                </div>
+                <OverlayTakeover idx={props.idx} callClose={handleClose}>
+                </OverlayTakeover>
             </StyledModal>
+            <StyledModal 
+                show={fee}
+                onHide={()=> {setFee(false); setHover(false)}}
+                renderBackdrop={renderBackdrop}
+            >
+                <OverlayFee idx={props.idx} callClose={handleClose}>
+                </OverlayFee>
+            </StyledModal>
+            {/* <StyledModal 
+                show={spell}
+                onHide={()=> {setSpell(false); setHover(false)}}
+                renderBackdrop={renderBackdrop}
+            >
+                <OverlaySpell idx={props.idx} callClose={handleClose}>
+                </OverlaySpell>
+            </StyledModal> */}
             
         </div>
     )

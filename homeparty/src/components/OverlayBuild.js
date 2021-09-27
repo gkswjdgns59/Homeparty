@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import styles from './Overlay.module.css';
+import CashHandler from './CashHandler';
 
-export default function Overlay(props){
+export default function OverlayBuild(props){
     const [op, setOp] = useState(null);
     const callClose = props.callClose;
     const handleOp = (event) => {
@@ -20,6 +21,14 @@ export default function Overlay(props){
     const dehandleOP = () => {
         setOp(null);
     }
+    const doBuild = () => {
+        CashHandler.setCash(props.idx-1, -(10+op*5));
+        CashHandler.setBuildingWorth(props.idx-1, 10+op*5);
+        setOp(null);
+        
+        callClose();
+    }
+
     return(
         <div>
             <div className={styles.header}>BUILD</div>
@@ -27,24 +36,24 @@ export default function Overlay(props){
                 <span className={styles.textOption}>COLOR</span>
                 <span className={styles.options}>
                     <div onClick={handleOp} className={styles.op1}>
-                        {op==1 && <div onClick={dehandleOP} className={styles.opSelected}>
+                        {op===1 && <div onClick={dehandleOP} className={styles.opSelected}>
                         </div>}
                     </div>
                     <div onClick={handleOp} className={styles.op2}>
-                        {op==2 && <div onClick={dehandleOP} className={styles.opSelected}>
+                        {op===2 && <div onClick={dehandleOP} className={styles.opSelected}>
                         </div>}
                     </div>
                     <div onClick={handleOp} className={styles.op3}>
-                        {op==3 && <div onClick={dehandleOP} className={styles.opSelected}>
+                        {op===3 && <div onClick={dehandleOP} className={styles.opSelected}>
                         </div>}
                     </div>
                     <div onClick={handleOp} className={styles.op4}>
-                        {op==4 && <div onClick={dehandleOP} className={styles.opSelected}>
+                        {op===4 && <div onClick={dehandleOP} className={styles.opSelected}>
                         </div>}
                     </div>
                 </span>
             </div>
-            {op!=null && <div>
+            {op!==null && <div>
                 <hr size={5}/>
                 <div className={styles.rowRecipt}>
                     <span className={styles.cost}>COST:</span>
@@ -52,7 +61,7 @@ export default function Overlay(props){
                 </div>
                 <div className={styles.rowRecipt}>
                     <span className={styles.balance}>BALANCE:</span>
-                    <span className={styles.balance}>120</span>
+                    <span className={styles.balance}>{CashHandler.getCash(props.idx-1)-(10+op*5)}</span>
                 </div>
             </div>}
             
@@ -61,8 +70,8 @@ export default function Overlay(props){
                 <span onClick={callClose} className={styles.cancelAction}>CANCEL</span>
                 {op===null &&
                     <span className={styles.acceptUnabled}>ACCEPT</span>}
-                {op!=null &&
-                    <span className={styles.acceptIdle}>ACCEPT</span>}
+                {op!==null &&
+                    <span onClick={doBuild} className={styles.acceptIdle}>ACCEPT</span>}
             </div>
         </div>
     )
