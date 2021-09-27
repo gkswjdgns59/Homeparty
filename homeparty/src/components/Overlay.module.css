@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'neutral';
+    src: url('../fonts/NeutralFace.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'neutralBold';
+    src: url('../fonts/NeutralFace-Bold.otf') format('truetype');
+}
+
+.header {   
+    font-family: 'neutralBold';
+    font-size: 16pt;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.rowOption {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 3%;
+    padding-right: 10%;
+    margin: 40px 0px;
+}
+
+.rowRecipt {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15%;
+    margin: 8px 0px;
+}
+
+.rowAction {
+    margin-top: 18px;
+    display: flex;
+    justify-content: right;
+    gap: 18px;
+}
+
+.textOption {
+    font-family: 'neutral';
+    font-size: 12pt;
+}
+
+.options {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.op1 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #EFBBA4;
+    cursor: pointer;
+    position: relative;
+}
+
+.op2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #86DD88;
+    cursor: pointer;
+    position: relative;
+}
+
+.op3 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #E8A3ED;
+    cursor: pointer;
+    position: relative;
+}
+
+.op4 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #80A9E7;
+    cursor: pointer;
+    position: relative;
+    border-style: hidden;
+    border-width: 1px;
+}
+
+.opSelected {
+    position: absolute;
+    z-index: 1050;
+    width: 27px;
+    height: 27px;
+    left: -3.5px;
+    top: -3.5px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.cost {
+    font-family: 'neutralBold';
+    font-size: 12pt;
+}
+
+.balance {
+    font-family: 'neutral';
+    font-size: 12pt;
+}
+
+.cancelAction {
+    font-family: 'neutral';
+    font-size: 12pt;
+    cursor: pointer;
+}
+
+.acceptUnabled {
+    font-family: 'neutralBold';
+    font-size: 12pt;
+    color: #EAEAEA;
+}
+
+.acceptIdle {
+    font-family: 'neutralBold';
+    font-size: 12pt;
+    cursor: pointer;
+}
