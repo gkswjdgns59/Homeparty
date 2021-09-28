@@ -68,7 +68,7 @@ export default function OverlayFee(props){
 
     return(
         <div>
-            <div className={styles.header}>FEE</div>
+            <div className={styles.header}>PAY FEE</div>
             <div className={styles.rowOption}>
                 <span className={styles.textOption}>OWNER:</span>
                 <span className={styles.options}>

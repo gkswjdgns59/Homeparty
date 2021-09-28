@@ -75,7 +75,7 @@ export default function OverlayIf(props){
     const callClose = props.callClose;
     return(
         <div onClick={callClose} className={styles.cardIf}>
-            <img src={images[props.idx].img} className={styles.cardImage}></img>
+            <img src={images[props.idx].img} alt={images[props.idx].content} className={styles.cardImage}></img>
             <hr width="82px" align="center" size="5" color="black"/>
             <div className={styles.cardContent} dangerouslySetInnerHTML={{__html: images[props.idx].content}}></div>
             <div className={styles.rowCard}>

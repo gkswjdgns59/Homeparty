@@ -43,13 +43,14 @@ export default function SingleTeam(props){
 
     const renderBackdrop = (props) => <Backdrop {...props} />;
     const handleClose = () => {
+        props.setCall();
         setBuild(false);
         setTakeover(false);
         setFee(false);
         setSpell(false);
         setHover(false);
-        console.log(CashHandler.getData());
     }
+
     return(
         <div className={styles.box} onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)}>
             {hover && <div className={styles.hovered}>
@@ -59,7 +60,7 @@ export default function SingleTeam(props){
                     <div onClick={()=>setTakeover(true)} className={styles.circleDoubleLine}>
                         TAKE<br/>OVER
                     </div>
-                    <div onClick={()=>{CashHandler.setCash(props.idx-1, 70); setHover(false)}} className={styles.circle}>
+                    <div onClick={()=>{CashHandler.setCash(props.idx-1, 70); setHover(false); props.setCall();}} className={styles.circle}>
                         SALARY
                     </div>
                     <div onClick={()=>setFee(true)} className={styles.circleDoubleLine}>
@@ -74,14 +75,14 @@ export default function SingleTeam(props){
                     TEAM #{props.idx}
                 </span>
                 <span className={styles.textRank}>
-                    RANK: {CashHandler.getRank(props.idx-1)}
+                    RANK: {props.rank}
                 </span>
             </div>
             <div className={styles.textStats}>
-                NET WORTH   {CashHandler.getNet(props.idx-1)}
+                NET WORTH   {props.net}
             </div>
             <div className={styles.textStats}>
-                CASH   {CashHandler.getCash(props.idx-1)}
+                CASH   {props.cash}
             </div>
             <StyledModal 
                 show={build}
