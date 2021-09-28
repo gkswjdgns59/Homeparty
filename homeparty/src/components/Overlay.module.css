@@ -14,15 +14,14 @@
     text-align: center;
     margin: auto;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .rowOption {
     display: flex;
     justify-content: space-between;
-    padding-left: 3%;
-    padding-right: 10%;
-    margin: 40px 0px;
+    align-items: center;
+    margin: 30px 0px;
 }
 
 .rowRecipt {
@@ -130,7 +129,7 @@
 
 .own {
     font-family: 'neutral';
-    font-size: 12pt;
+    font-size: 10pt;
     text-align: center;
     cursor: pointer;
     position: relative;
@@ -209,6 +208,15 @@
     font-family: 'neutralBold';
 }
 
-.bold{
-    font-family: 'neutralBold';
+.list{
+    height: 0.9px;
+    background: #DADADA;
+}
+
+.listContent{
+    text-align: center;
+    font-family: 'neutral';
+    text-align: center;
+    font-size: 11pt;
+    cursor: pointer;
 }

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import OverlayBuild from './OverlayBuild';
 import OverlayTakeover from './OverlayTakeover';
 import OverlayFee from './OverlayFee';
-// import OverlaySpell from './OverlaySpell';
+import OverlaySpell from './OverlaySpell';
 import CashHandler from './CashHandler';
 
 const Backdrop = styled("div")`
@@ -108,14 +108,14 @@ export default function SingleTeam(props){
                 <OverlayFee idx={props.idx} callClose={handleClose}>
                 </OverlayFee>
             </StyledModal>
-            {/* <StyledModal 
+            <StyledModal 
                 show={spell}
                 onHide={()=> {setSpell(false); setHover(false)}}
                 renderBackdrop={renderBackdrop}
             >
                 <OverlaySpell idx={props.idx} callClose={handleClose}>
                 </OverlaySpell>
-            </StyledModal> */}
+            </StyledModal>
             
         </div>
     )
