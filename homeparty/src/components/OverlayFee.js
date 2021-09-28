@@ -121,7 +121,7 @@ export default function OverlayFee(props){
                 </span>
             </div>
             <div className={styles.rowOption}>
-                <span className={styles.textOption}>NUMBER OF BULIDINGS:</span>
+                <span className={styles.textOption}>NUMBER OF<br/>BULIDINGS:</span>
                 <span className={styles.options}>
                     <div onClick={handleNum} className={styles.own} id="1">
                         1

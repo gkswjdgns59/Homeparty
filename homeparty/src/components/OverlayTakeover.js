@@ -33,9 +33,9 @@ export default function OverlayTakeover(props){
     }
     const doTakeover = () => {
         CashHandler.setCash(props.idx-1, -((10+op*5)*2*num));
-        CashHandler.setBuildingWorth(props.idx-1, (10+op*5)*2*num);
+        CashHandler.setBuildingWorth(props.idx-1, (10+op*5)*num);
         CashHandler.setCash(own-1, ((10+op*5)*2*num));
-        CashHandler.setBuildingWorth(own-1, -((10+op*5)*2*num));
+        CashHandler.setBuildingWorth(own-1, -((10+op*5)*num));
         setOp(null);
         setNum(null);
         setOwn(null);
@@ -105,7 +105,7 @@ export default function OverlayTakeover(props){
                 </span>
             </div>
             <div className={styles.rowOption}>
-                <span className={styles.textOption}>NUMBER OF BULIDINGS:</span>
+                <span className={styles.textOption}>NUMBER OF<br/>BULIDINGS:</span>
                 <span className={styles.options}>
                     <div onClick={handleNum} className={styles.own} id="1">
                         1
