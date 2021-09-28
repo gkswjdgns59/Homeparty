@@ -54,7 +54,7 @@ export default function OverlayTakeover(props){
         <div>
             <div className={styles.header}>TAKEOVER</div>
             <div className={styles.rowOption}>
-                <span className={styles.textOption}>OWNER</span>
+                <span className={styles.textOption}>OWNER:</span>
                 <span className={styles.options}>
                     <div onClick={handleOwn} className={styles.own} id="1">
                         1
@@ -84,7 +84,7 @@ export default function OverlayTakeover(props){
                 </span>
             </div>
             <div className={styles.rowOption}>
-                <span className={styles.textOption}>COLOR</span>
+                <span className={styles.textOption}>COLOR:</span>
                 <span className={styles.options}>
                     <div onClick={handleOp} className={styles.op1}>
                         {op===1 && <div onClick={dehandleOP} className={styles.opSelected}>
@@ -105,7 +105,7 @@ export default function OverlayTakeover(props){
                 </span>
             </div>
             <div className={styles.rowOption}>
-                <span className={styles.textOption}>NUMBER OF BULIDINGS</span>
+                <span className={styles.textOption}>NUMBER OF BULIDINGS:</span>
                 <span className={styles.options}>
                     <div onClick={handleNum} className={styles.own} id="1">
                         1

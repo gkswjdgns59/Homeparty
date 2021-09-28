@@ -3,6 +3,7 @@ import styles from './Fields.module.css';
 import Modal from 'react-overlays/Modal';
 import OverlayIf from './OverlayIf';
 import styled from 'styled-components';
+import OverlayThen from './OveryThen';
 
 const Backdrop = styled("div")`
     position: fixed;
@@ -86,6 +87,14 @@ export default function FieldDice(){
                     <OverlayIf idx={parseInt(Math.floor(Math.random()*15)+1)} callClose={()=>{setShowIf(false); setHoverIf(false)}}>
                     </OverlayIf>
                 </StyledModalIf>
+                <StyledModalThen 
+                    show={showThen}
+                    onHide={()=> {setShowThen(false); setHoverThen(false)}}
+                    renderBackdrop={renderBackdrop}
+                >
+                    <OverlayThen idx={parseInt(Math.floor(Math.random()*20)+1)} callClose={()=>{setShowThen(false); setHoverThen(false)}}>
+                    </OverlayThen>
+                </StyledModalThen>
             </div>
         </div>
     )

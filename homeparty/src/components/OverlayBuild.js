@@ -33,7 +33,7 @@ export default function OverlayBuild(props){
         <div>
             <div className={styles.header}>BUILD</div>
             <div className={styles.rowOption}>
-                <span className={styles.textOption}>COLOR</span>
+                <span className={styles.textOption}>COLOR:</span>
                 <span className={styles.options}>
                     <div onClick={handleOp} className={styles.op1}>
                         {op===1 && <div onClick={dehandleOP} className={styles.opSelected}>
