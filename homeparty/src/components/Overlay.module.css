@@ -129,9 +129,53 @@
 
 .own {
     font-family: 'neutral';
-    font-size: 10pt;
+    font-size: 9pt;
     text-align: center;
     cursor: pointer;
+    position: relative;
+}
+
+.ownNum{
+    font-family: 'neutral';
+    font-size: 9pt;
+    text-align: center;
+    cursor: pointer;
+}
+
+.ownColor1{
+    width: 15px;
+    height: 3px;
+    background: #AEDBDD;
+}
+
+.ownColor2{
+    width: 15px;
+    height: 3px;
+    background: #535353;
+}
+
+.ownColor3{
+    width: 15px;
+    height: 3px;
+    background: #EFF04F;
+}
+
+.ownColor4{
+    width: 15px;
+    height: 3px;
+    background: #D7D5E6;
+}
+
+.ownColor5{
+    width: 15px;
+    height: 3px;
+    background: #C15797;
+}
+
+.ownGroup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
 }
 
@@ -140,7 +184,7 @@
     z-index: 1050;
     width: 27px;
     height: 27px;
-    left: -8.6px;
+    left: -6px;
     top: -3.5px;
     border-radius: 50%;
     background: rgba(0,0,0,0);
@@ -148,6 +192,23 @@
     border-width: 1px;
     text-align: center;
     line-height: 27px;
+    cursor: pointer;
+}
+
+.ownSelected2 {
+    position: absolute;
+    z-index: 1050;
+    width: 27px;
+    height: 27px;
+    left: -10px;
+    top: -3.5px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0);
+    border-style: solid;
+    border-width: 1px;
+    text-align: center;
+    line-height: 27px;
+    cursor: pointer;
 }
 
 .seasonSelected {
@@ -155,7 +216,7 @@
     z-index: 1050;
     width: 27px;
     height: 27px;
-    left: 4px;
+    left: 1px;
     top: -3.5px;
     border-radius: 50%;
     background: rgba(0,0,0,0);

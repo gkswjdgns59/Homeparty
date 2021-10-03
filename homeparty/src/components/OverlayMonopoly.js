@@ -44,35 +44,41 @@ export default function OverlayMonopoly(props){
             <div className={styles.rowOption}>
                 <span className={styles.textOption}>TEAM:</span>
                 <span className={styles.options}>
-                    <div onClick={handleOwn} className={styles.own} id="1">
-                        1
+                    <div className={styles.ownGroup}>
+                        <div onClick={handleOwn} className={styles.ownNum} id="1">1</div>
+                        <div className={styles.ownColor1}></div>
+
                         {own==='1' && <div onClick={dehandleOwn} className={styles.ownSelected}>
                         </div>}
                     </div>
-                    <div onClick={handleOwn} className={styles.own} id="2">
-                        2
+                    <div className={styles.ownGroup}>
+                        <div onClick={handleOwn} className={styles.ownNum} id="2">2</div>
+                        <div className={styles.ownColor2}></div>
                         {own==='2' && <div onClick={dehandleOwn} className={styles.ownSelected}>
                         </div>}
                     </div>
-                    <div onClick={handleOwn} className={styles.own} id="3">
-                        3
+                    <div className={styles.ownGroup}>
+                        <div onClick={handleOwn} className={styles.ownNum} id="3">3</div>
+                        <div className={styles.ownColor3}></div>
                         {own==='3' && <div onClick={dehandleOwn} className={styles.ownSelected}>
                         </div>}
                     </div>
-                    <div onClick={handleOwn} className={styles.own} id="4">
-                        4
+                    <div className={styles.ownGroup}>
+                        <div onClick={handleOwn} className={styles.ownNum} id="4">4</div>
+                        <div className={styles.ownColor4}></div>
                         {own==='4' && <div onClick={dehandleOwn} className={styles.ownSelected}>
                         </div>}
                     </div>
-                    <div onClick={handleOwn} className={styles.own} id="5">
-                        5
+                    <div className={styles.ownGroup}>
+                        <div onClick={handleOwn} className={styles.ownNum} id="5">5</div>
+                        <div className={styles.ownColor5}></div>
                         {own==='5' && <div onClick={dehandleOwn} className={styles.ownSelected}>
                         </div>}
                     </div>
                 </span>
             </div>
             <div className={styles.rowOption}>
-                <span className={styles.textOption}>COLOR:</span>
+                <span className={styles.textOption}>LAND<br/>COLOR:</span>
                 <span className={styles.options}>
                     <div onClick={handleOp} className={styles.op1}>
                         {op===1 && <div onClick={dehandleOP} className={styles.opSelected}>

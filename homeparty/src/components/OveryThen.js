@@ -30,7 +30,7 @@ const images = {
     2: {
         'img' : Img2,
         'title' : 'Guardian Angel',
-        'content' : 'You can use this card <br/> to pass others’ land <br/> without paying any fee.'
+        'content' : 'You can use this card <br/> to pass others’ land <br/> without paying any toll fee.'
     },
     3: {
         'img' : Img3,
@@ -50,7 +50,7 @@ const images = {
     6: {
         'img' : Img6,
         'title' : 'Guardian Angel',
-        'content' : 'You can use this card <br/> to pass others’ land <br/> without paying any fee.'
+        'content' : 'You can use this card <br/> to pass others’ land <br/> without paying any toll fee.'
     },
     7: {
         'img' : Img7,

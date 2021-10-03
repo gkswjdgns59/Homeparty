@@ -64,16 +64,28 @@ export default function SingleTeam(props){
                         SALARY
                     </div>
                     <div onClick={()=>setFee(true)} className={styles.circleDoubleLine}>
-                        PAY<br/>FEE
+                        PAY<br/>TOLL
                     </div>
                     <div onClick={()=>setSpell(true)} className={styles.circleDoubleLine}>
                         MAGIC<br/>SPELL
                     </div>
                 </div>}
             <div className={styles.textGroup}>
-                <span className={styles.textTitle}>
-                    TEAM #{props.idx}
-                </span>
+                <div className={styles.titleGroup}>
+                    {props.idx===1 &&
+                    <span className={styles.color1}></span>}
+                    {props.idx===2 &&
+                    <span className={styles.color2}></span>}
+                    {props.idx===3 &&
+                    <span className={styles.color3}></span>}
+                    {props.idx===4 &&
+                    <span className={styles.color4}></span>}
+                    {props.idx===5 &&
+                    <span className={styles.color5}></span>}
+                    <span className={styles.textTitle}>
+                        TEAM #{props.idx}
+                    </span>
+                </div>
                 <span className={styles.textRank}>
                     RANK: {props.rank}
                 </span>

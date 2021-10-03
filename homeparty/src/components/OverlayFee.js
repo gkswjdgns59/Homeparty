@@ -68,39 +68,45 @@ export default function OverlayFee(props){
 
     return(
         <div>
-            <div className={styles.header}>PAY FEE</div>
+            <div className={styles.header}>PAY TOLL</div>
             <div className={styles.rowOption}>
                 <span className={styles.textOption}>OWNER:</span>
                 <span className={styles.options}>
-                    <div onClick={handleOwn} className={styles.own} id="1">
-                        1
+                    <div className={styles.ownGroup}>
+                        <div onClick={handleOwn} className={styles.ownNum} id="1">1</div>
+                        <div className={styles.ownColor1}></div>
+
                         {own==='1' && <div onClick={dehandleOwn} className={styles.ownSelected}>
                         </div>}
                     </div>
-                    <div onClick={handleOwn} className={styles.own} id="2">
-                        2
+                    <div className={styles.ownGroup}>
+                        <div onClick={handleOwn} className={styles.ownNum} id="2">2</div>
+                        <div className={styles.ownColor2}></div>
                         {own==='2' && <div onClick={dehandleOwn} className={styles.ownSelected}>
                         </div>}
                     </div>
-                    <div onClick={handleOwn} className={styles.own} id="3">
-                        3
+                    <div className={styles.ownGroup}>
+                        <div onClick={handleOwn} className={styles.ownNum} id="3">3</div>
+                        <div className={styles.ownColor3}></div>
                         {own==='3' && <div onClick={dehandleOwn} className={styles.ownSelected}>
                         </div>}
                     </div>
-                    <div onClick={handleOwn} className={styles.own} id="4">
-                        4
+                    <div className={styles.ownGroup}>
+                        <div onClick={handleOwn} className={styles.ownNum} id="4">4</div>
+                        <div className={styles.ownColor4}></div>
                         {own==='4' && <div onClick={dehandleOwn} className={styles.ownSelected}>
                         </div>}
                     </div>
-                    <div onClick={handleOwn} className={styles.own} id="5">
-                        5
+                    <div className={styles.ownGroup}>
+                        <div onClick={handleOwn} className={styles.ownNum} id="5">5</div>
+                        <div className={styles.ownColor5}></div>
                         {own==='5' && <div onClick={dehandleOwn} className={styles.ownSelected}>
                         </div>}
                     </div>
                 </span>
             </div>
             <div className={styles.rowOption}>
-                <span className={styles.textOption}>COLOR:</span>
+                <span className={styles.textOption}>LAND<br/>COLOR:</span>
                 <span className={styles.options}>
                     <div onClick={handleOp} className={styles.op1}>
                         {op===1 && <div onClick={dehandleOP} className={styles.opSelected}>
@@ -125,17 +131,17 @@ export default function OverlayFee(props){
                 <span className={styles.options}>
                     <div onClick={handleNum} className={styles.own} id="1">
                         1
-                        {num==='1' && <div onClick={dehandleNum} className={styles.ownSelected}>
+                        {num==='1' && <div onClick={dehandleNum} className={styles.ownSelected2}>
                         </div>}
                     </div>
                     <div onClick={handleNum} className={styles.own} id="2">
                         2
-                        {num==='2' && <div onClick={dehandleNum} className={styles.ownSelected}>
+                        {num==='2' && <div onClick={dehandleNum} className={styles.ownSelected2}>
                         </div>}
                     </div>
                     <div onClick={handleNum} className={styles.own} id="3">
                         3
-                        {num==='3' && <div onClick={dehandleNum} className={styles.ownSelected}>
+                        {num==='3' && <div onClick={dehandleNum} className={styles.ownSelected2}>
                         </div>}
                     </div>
                 </span>
@@ -163,7 +169,7 @@ export default function OverlayFee(props){
             {op!==null && num!==null && own!==null && season!==null && <div>
                 <hr size={5}/>
                 <div className={styles.rowRecipt}>
-                    <span className={styles.cost}>FEE:</span>
+                    <span className={styles.cost}>TOLL:</span>
                     <span className={styles.cost}>{getCost()}</span>
                 </div>
                 <div className={styles.rowRecipt}>
